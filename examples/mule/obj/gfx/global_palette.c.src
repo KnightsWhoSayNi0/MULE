@@ -1,0 +1,8 @@
+	section	.text,"ax",@progbits
+	assume	adl = 1
+	section	.data,"aw",@progbits
+	public	_global_palette
+_global_palette:
+	db	"",311o,022o,326o,"Z",000o,000o,021o,205o,010o,241o,"6R",366o,"M1FVI",326o,332o,"v",326o,226o,"I",326o,"M",366o,321o,"vI6",311o,226o,326o,"v",311o,"V",311o,226o,315o,"V",326o,226o,"V",266o,315o,026o,"R",026o,322o,"m",252o,366o,"Q",326o,315o,266o,"V",252o,032o,"vV",266o,"M0B",252o,226o,"O:",251o,022o,213o,242o,"N",262o,"0",276o,"(!",214o,"""",251o,222o,211o,026o,"goN",266o,351o,231o,211o,226o,252o,026o,213o,236o,"/",272o,"H",241o,"(",241o,"H!m.i",235o,"/",276o,226o,"M)%",266o,"Zn2",351o,031o,211o,235o,")",226o,311o,231o,316o,"9",214o,"1k-",352o,342o,253o,036o,214o,"&",255o,"5J",251o,"n.",352o,"^V",322o,"N6O6",311o,035o,"I!)",032o,"I",226o,011o,232o,"k",255o,"i!",011o,245o,314o,"16I",251o,226o,355o,261o,226o,311o,253o,")VV",316o,271o,"f",363o,266o,332o,"VR6",322o
+
+	ident	"clang version 12.0.0 (https://github.com/jacobly0/llvm-project 170be88120e3aa88c20eea5615ba76b8f1d6c647)"

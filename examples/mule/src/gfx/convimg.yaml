@@ -1,0 +1,26 @@
+palettes:
+  - name: global_palette
+    fixed-entries:
+      - color: {index: 0, r: 34, g: 177, b: 76}
+      - color: {index: 1, r: 179, g: 179, b: 179}
+      - color: {index: 2, r: 0, g: 0, b: 0}
+      - color: {index: 3, r: 10, g: 69, b: 141}
+    images: automatic
+
+converts:
+  - name: sprites
+    palette: global_palette
+    transparent-color-index: 0
+    images:
+      - mule.png
+      - mule_behind.png
+      - mule2.png
+      - ea_logo.png
+
+outputs:
+  - type: c
+    include-file: gfx.h
+    palettes:
+      - global_palette
+    converts:
+      - sprites

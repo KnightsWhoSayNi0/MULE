@@ -1,0 +1,27 @@
+	section .icon
+
+	jp	___prgm_init
+	db	$01
+	public ___icon
+___icon:
+	db	$10, $10
+	db	$FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+	db	$FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $6B, $6C, $6B, $94, $FF, $FF, $FF, $FF
+	db	$FF, $FF, $FE, $D6, $FF, $FF, $D6, $6B, $93, $93, $93, $93, $6C, $FF, $FF, $FF
+	db	$FF, $FF, $94, $6B, $B5, $B5, $6C, $93, $93, $93, $93, $93, $93, $94, $DE, $FF
+	db	$DE, $B5, $B5, $DE, $94, $8C, $93, $93, $93, $93, $93, $93, $93, $8C, $93, $FE
+	db	$DE, $6B, $94, $B5, $94, $8C, $93, $93, $93, $93, $93, $93, $93, $93, $6C, $DE
+	db	$D6, $6B, $8C, $8C, $8C, $B6, $8C, $93, $93, $93, $93, $93, $93, $93, $6C, $D6
+	db	$FF, $FF, $B5, $6B, $DE, $FF, $94, $93, $6C, $6C, $93, $93, $93, $93, $94, $FF
+	db	$FF, $FF, $FF, $FF, $FF, $B5, $8C, $6C, $FF, $FF, $8C, $93, $93, $6C, $FF, $FF
+	db	$FF, $FF, $FF, $FF, $FF, $6B, $93, $6B, $FF, $FF, $FF, $94, $93, $93, $94, $FF
+	db	$FF, $FF, $FF, $FF, $FF, $6C, $94, $21, $6C, $FF, $FF, $D6, $4A, $6B, $6C, $D6
+	db	$FF, $FF, $FF, $FF, $FF, $6B, $FF, $4A, $8C, $FF, $FF, $D6, $21, $B5, $93, $DE
+	db	$FF, $FF, $FF, $FF, $FF, $6B, $FF, $94, $6C, $FF, $FF, $D6, $29, $FF, $94, $DE
+	db	$FF, $FF, $FF, $FF, $B5, $6B, $DE, $4A, $93, $FF, $FF, $6B, $49, $FF, $6C, $DE
+	db	$FF, $FF, $FF, $FF, $94, $6B, $D6, $01, $6C, $FF, $FF, $21, $29, $D6, $6B, $D6
+	db	$FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+	public ___description
+___description:
+	db	"M.U.L.E. for the 84+CE", 0
+___prgm_init:
