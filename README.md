@@ -2,3 +2,5 @@
 
 This is a recreation of the game M.U.L.E.
 I'm basing this off the atari 800 version, as that's the version I'm most farmiliar with.
+
+![eye candy](https://i.imgur.com/h7qVXyl.png)
