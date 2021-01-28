@@ -5,11 +5,6 @@
 
 #include "gfx/gfx.h"
 
-// game vars
-int level = 0; // 0 = beginner 1 = tournament
-int planeteers = 0; // 0 = 1 (only one for now)
-
-
 void drawMule(gfx_sprite_t *sprite, int x, int y) {
 	gfx_GetSprite(mule_behind, x, y);
 	gfx_TransparentSprite(sprite, x, y);
@@ -18,6 +13,11 @@ void drawMule(gfx_sprite_t *sprite, int x, int y) {
 /* Main function, called first */
 int main(void)
 {	
+
+	// game vars
+	int level = 0; // 0 = beginner 1 = tournament
+	int planeteers = 0; // 0 = 1 (only one for now)
+
 	int x = -100;
 	int y = 100;
 	bool moving = true;
@@ -29,6 +29,8 @@ int main(void)
 	// background
 	gfx_Begin();
 	gfx_SetPalette(global_palette, sizeof_global_palette, 0);
+	
+	kb_DisableOnLatch();
 	
 	/* EA LOGO */
 	gfx_FillScreen(1); // fill with grey
@@ -73,9 +75,10 @@ int main(void)
 			return 0;
 		}
 
-		delay(100);
+		delay(150);
 	}
 
+	/* GAME SETTINGS */
 	gfx_FillScreen(230); // fill with yellow
 	gfx_SetTextFGColor(2);
 	gfx_SetTextScale(4, 4);
@@ -86,7 +89,9 @@ int main(void)
 	gfx_PrintStringXY("PRESS ENTER TO CONTINUE", 70, 220);
 	gfx_SetTextFGColor(3);
 
-	while (true) {
+	bool inSettings = true;
+
+	while (inSettings) {
 		switch (level) {
 			case 0:
 				gfx_PrintStringXY("BEGINNER", 130, 160);
@@ -112,6 +117,8 @@ int main(void)
 			} else {
 				level = 0;
 			}
+			gfx_SetColor(230);
+			gfx_FillRectangle(130, 160, 100, 20);
 		}
 
 		if (kb_Data[2] & kb_Alpha) {
@@ -120,9 +127,12 @@ int main(void)
 			} else {
 				planeteers = 0;
 			}
+			gfx_SetColor(230);
+			gfx_FillRectangle(118, 200, 100, 20);
 		}
 
-		if (kb_Data[6] & kb_Enter) {
+		if (kb_Data[5] & kb_Enter) {
+			inSettings = false;
 			continue;
 		}
 
@@ -132,7 +142,7 @@ int main(void)
 		}
 	}
 
-	delay(1000);
+
 
 	gfx_End();
     return 0;
